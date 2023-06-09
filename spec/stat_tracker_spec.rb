@@ -1,5 +1,10 @@
 require '../futbol/lib/stat_tracker'
 
+# IMPORTANT
+# ___________________________
+# !!! THIS IS THE SPEC HARNESS VERSION OF THIS FILE !!!#
+# ___________________________
+
 RSpec.describe StatTracker do
   before(:all) do
     game_path = './data/games.csv'
@@ -15,7 +20,7 @@ RSpec.describe StatTracker do
     @stat_tracker = StatTracker.from_csv(locations)
   end
 
-  xit 'exists' do
+  it 'exists' do
     expect(@stat_tracker).to be_an_instance_of StatTracker
   end
 
@@ -27,12 +32,12 @@ RSpec.describe StatTracker do
     expect(@stat_tracker.lowest_total_score).to eq 0
   end
 
-  xit '#percentage_home_wins' do
+  it '#percentage_home_wins' do
     expect(@stat_tracker.percentage_home_wins).to eq 0.44
   end
 
-  xit '#percentage_visxitor_wins' do
-    expect(@stat_tracker.percentage_visxitor_wins).to eq 0.36
+  it '#percentage_visitor_wins' do
+    expect(@stat_tracker.percentage_visitor_wins).to eq 0.36
   end
 
   xit '#percentage_ties' do
