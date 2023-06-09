@@ -72,7 +72,7 @@ RSpec.describe StatTracker do
     expect(@stat_tracker.average_goals_by_season).to eq expected
   end
 
-  xit '#count_of_teams' do
+  it '#count_of_teams' do
     expect(@stat_tracker.count_of_teams).to eq 32
   end
 
